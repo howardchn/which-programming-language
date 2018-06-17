@@ -1,0 +1,67 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    min-height: 528px;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.main-title {
+    margin: 36px auto 10px auto;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.main-list-container {
+    margin-top: 20px;
+    padding: 0px;
+}
+
+ul, li {
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.btn {
+    white-space: normal;
+}
+
+#circle {
+    margin: 0px auto;
+    float: none;
+    display: block;
+    margin-top: 20px;
+}
+
+#loadingContainer {
+    width: 80px;
+    margin: 0px auto;
+}
+
+button {
+    text-transform: capitalize;
+}
+
+img {
+    margin: 0px auto;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 10px;
+    color: #c0c0c0;
+}
+
+footer div {
+    margin: 5px;
+}
+
+input.input-name, button.button-start {
+    margin-top: 10px;
+}
+
