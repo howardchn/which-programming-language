@@ -28,22 +28,24 @@
 </template>
 
 <script>
-import H from "./questions";
 import Lang from "./leanutils";
 import Vue from "vue";
+import Questions from './questions';
+import Relations from './relations';
 
-var questionManager = new H.Questions();
+var questions = new Questions();
+questions.load();
 Vue.filter('detailName', function (id) {
-    return questionManager.getDetail(id).name;
+    return questions.getDetail(id).name;
 });
 
 var triggerQuestionChanged = function(relation) {
   Vue.set(data, "current", relation);
-  Vue.set(data, "currentQ", questionManager.getDetail(relation.id));
+  Vue.set(data, "currentQ", questions.getDetail(relation.id));
 };
 
-var starterRel = H.starterRelations;
-var startQ = questionManager.getDetail(starterRel.id);
+var starterRel = new Relations().starterRelation;
+var startQ = questions.getDetail(starterRel.id);
 var data = {
   current: starterRel,
   currentQ: startQ,
@@ -65,7 +67,7 @@ export default {
 
         let lang = new Lang();
         lang.set("user", data.user);
-        lang.set("lang", questionManager.getDetail(nextQuestion.id).name);
+        lang.set("lang", questions.getDetail(nextQuestion.id).name);
         lang.save().then(() => {
           data.isLoading = false;
           triggerQuestionChanged(nextQuestion);
@@ -75,7 +77,7 @@ export default {
       }
     },
     reset: function() {
-      triggerQuestionChanged(H.starterRelations);
+      triggerQuestionChanged(starterRel);
     }
   }
 };
