@@ -78,6 +78,7 @@ class Questions {
         this.add(1006, 'C++', '/images/cpp.png');
         this.add(1007, 'C', '/images/c.png');
         this.add(1008, 'Ruby', '/images/ruby.png');
+        return this;
     }
 
     getDetail(id) {

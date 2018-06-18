@@ -13,6 +13,7 @@ a {
     text-transform: capitalize;
     line-height: 40px;
     font-weight: bold;
+    max-width: 450px;
 }
 
 .main-list-container {
@@ -20,13 +21,17 @@ a {
     padding: 0px;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
     text-transform: capitalize;
 }
 
 .btn {
     white-space: normal;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #circle {
@@ -61,7 +66,15 @@ footer div {
     margin: 5px;
 }
 
-input.input-name, button.button-start {
-    margin-top: 10px;
+input.input-name,
+button.button-start {
+    margin: 10px auto;
+    max-width: 350px;
 }
 
+p.tips {
+    text-align: center;
+    color: gray;
+    margin: 15px auto;
+    max-width: 350px;
+}
