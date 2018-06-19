@@ -3,7 +3,7 @@
         <h1 class="main-title">Which Programming Language</h1>
         <img src="/assets/images/starter.png" />
         <p class="tips">
-          In the following contents, some simple questions are ready for you. Follow your heart to answer those questions that will lead you to one programming language you might proper to learn. In the final result, we will represent you the advantage of your chosen programming language.
+          Get to know your programming language with few questions. Enjoy it!
         </p>
         <div>
           <button class="btn btn-lg btn-block btn-success button-start" 

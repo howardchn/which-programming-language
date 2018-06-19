@@ -7,6 +7,6 @@ import AppRouter from './routers/router';
 new Vue({
     el: '#app',
     components: { App },
-    template: '<App1 />',
+    template: '<App />',
     router: AppRouter
 });

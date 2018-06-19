@@ -1,9 +1,10 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const UglifyJS = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: path.join(__dirname, 'app', 'index'),
   output: {
     filename: 'bundle.js',
@@ -33,7 +34,10 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new UglifyJS()
+    new UglifyJS(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   ],
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css', '.vue'],
