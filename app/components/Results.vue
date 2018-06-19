@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="main-title">{{ name }}</h1>
-        <img :src="'/assets/images/' + img" />
+        <img :src="'./assets/images/' + img" />
 
         <div class="container content-container">
             <section>
@@ -53,12 +53,6 @@ export default {
         lang.save();
 
         return result;
-    },
-    methods: {
-        reset: function() {
-            this.$router.reset();
-            this.$router.push({ path: '/home' });
-        }
     },
     components: { StarRating }
 }

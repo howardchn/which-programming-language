@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="main-title">Which Programming Language</h1>
-        <img src="/assets/images/starter.png" />
+        <img src="assets/images/starter.png" />
         <p class="tips">
           Get to know your programming language with few questions. Enjoy it!
         </p>
