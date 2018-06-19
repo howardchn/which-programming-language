@@ -33,7 +33,8 @@ export default {
                 this.$router.push({ path: `/results/${questionId}` });
             }
             else {
-                this.$router.push({ path: `/questions/${relationId}` });
+                Object.assign(this.$data, questionService.query(relationId));
+                // this.$router.push({ path: `/questions/${relationId}` });
             }
         }
     },
