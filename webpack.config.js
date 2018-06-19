@@ -1,6 +1,6 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJS = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -32,7 +32,8 @@ module.exports = {
     }]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new UglifyJS()
   ],
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css', '.vue'],
