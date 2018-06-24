@@ -33,6 +33,7 @@ This is a popular architecture for a normal or even enterprise usage. To be hone
 This time, I found it could much simpler. For the architecture designing, _there is not a best architecture, but only has the proper architecture_. I could choose a popular architecture for your app, but it might not the proper one; it might make your development and maintainance harder.
 
 The new architecture change is like this.
+
 ![archiecture change](https://github.com/howardchn/which-programming-language/raw/master/assets/blog/structure-changes.png)
 
 #### Get rid of the backend
