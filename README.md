@@ -21,17 +21,19 @@ For the result page, you will only get the name of the programming language. Hen
 2. The difficulty of learning it.
 3. The popularity of this language.
 4. Which big company is using this technology.
+![result change](https://github.com/howardchn/which-programming-language/raw/master/assets/blog/one-result.png)
 
 That's it for the overview.
 
 # Round 2 - implementation
 Generally, this is implemented with vuejs + bootstrap + express (node) + mysql.
 
-![old structure](https://github.com/howardchn/chooselangguide/raw/master/structure-old.png)
-
 This is a popular architecture for a normal or even enterprise usage. To be honest, when I design this, my initial imagination is this, so I processed in this way without any doubt.
 
 This time, I found it could much simpler. For the architecture designing, _there is not a best architecture, but only has the proper architecture_. I could choose a popular architecture for your app, but it might not the proper one; it might make your development and maintainance harder.
+
+The new architecture change is like this.
+![archiecture change](https://github.com/howardchn/which-programming-language/raw/master/assets/blog/structure-changes.png)
 
 #### Get rid of the backend
 I already found my mini app is not necessary to have express and nodejs involved. The only purpose for add this level is that, I could add a Sqlite support and store the count of how many people prefers a specific language. To fix this, I searched on google, and found some solutions with some free cloud storage service. [Leancloud](https://leancloud.cn) is the one I used. Leancloud provides me an ability to store/fetch simple data object to cloud and easy to backup. It is pretty nice.
@@ -53,3 +55,5 @@ At this step, I'm satisfy with current refactor. But there are still st. I can i
 3. Allow to share the result on wechat or some popular social apps.
 4. Check the result of your history.
 5. Any suggestion from feedback.
+
+See you later. I appreciate any feedback by contact me on [Linkedin](www.linkedin.com/in/howard-chen-328493142) or [email](mailto:howardch@outlook.com).
